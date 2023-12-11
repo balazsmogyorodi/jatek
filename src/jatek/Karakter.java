@@ -17,7 +17,6 @@ public class Karakter {
         szerencse = dobas() + 6;
         this.nev = nev;
         this.kaszt = kaszt;
-
     }
 
     public int dobas() {
@@ -35,25 +34,40 @@ public class Karakter {
 
     }
 
-    public void hasznal(Targy targy) {
+    public void hasznal(String targy) {
         this.hasznal(targy, 1);
     }
 
-    public void hasznal(Targy targy, int mennyiseg) {
+    public void hasznal(String targy, int mennyiseg) {
         this.hasznal(targy, mennyiseg, true);
     }
 
-    public void hasznal(Targy targy, int mennyiseg, boolean hasznal) {
+    public void hasznal(String targy, int mennyiseg, boolean hasznal) {
         if (hasznal) {
             int index = 0;
             System.out.println(felszereles.get(index));
             while (mennyiseg != 0 && index < felszereles.size()) {
-                if (felszereles.get(index) == targy){
+                if (felszereles.get(index).getNev() == targy){
                     felszereles.remove(felszereles.get(index));
                     mennyiseg--;
                 }
                        index++;
             }
+            if(index >= felszereles.size()){
+                System.out.println("Nincs ilyen tárgy az inventoryban.");
+            } else{
+                System.out.println("Elhasználtad a tárgyadat.");
+            }
         }
+    }
+    
+    
+    
+    public void inventory(){
+        for (int i = 0; i < 10; i++) {
+            felszereles.get(i).toString();
+        }
+    
+    
     }
 }

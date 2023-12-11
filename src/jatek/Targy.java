@@ -18,4 +18,13 @@ public class Targy {
         id = UUID.randomUUID();
     }
 
+    public String getNev() {
+        return nev;
+    }
+
+    @Override
+    public String toString() {
+        return "Targy{" + "id=" + id + ", nev=" + nev + ", targy=" + targy + ", leiras=" + leiras + '}';
+    }
+
 }
