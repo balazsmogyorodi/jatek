@@ -16,6 +16,8 @@ public class Jatek {
         //   System.out.println("hello");
         
         
+        Karakter k1 = new Karakter ("Horvát Dani", "Varázsló");
+        
            
            
            
