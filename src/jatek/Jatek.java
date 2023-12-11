@@ -4,14 +4,19 @@ package jatek;
 
 public class Jatek {
     
-    
-    
-    public void run(){
-    
-    
-    
+    public Jatek(){
     
     
     }
+    
+    
+    
+       public void run() {
+        }
+    
+    
+  
+    
+    
     
 }
