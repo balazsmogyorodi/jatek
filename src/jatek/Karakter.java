@@ -12,15 +12,16 @@ public class Karakter {
     private ArrayList<Targy> felszereles;
 
     public Karakter(String nev, String kaszt) {
+        felszereles = new ArrayList<>();
         hp = dobas() + 12;
         kepesseg = dobas() + 6;
-        szerencse = dobas() + 6;
+        szerencse = dobas() ;
         this.nev = nev;
         this.kaszt = kaszt;
     }
 
     public int dobas() {
-        return rnd.nextInt(6) * 2;
+        return rnd.nextInt(6) + 1;
     }
 
     public void felvesz(Targy targy) {
@@ -43,31 +44,43 @@ public class Karakter {
     }
 
     public void hasznal(String targy, int mennyiseg, boolean hasznal) {
+        int db = mennyiseg;
         if (hasznal) {
             int index = 0;
-            System.out.println(felszereles.get(index));
             while (mennyiseg != 0 && index < felszereles.size()) {
-                if (felszereles.get(index).getNev() == targy){
+                if (felszereles.get(index).getNev() == targy) {
                     felszereles.remove(felszereles.get(index));
                     mennyiseg--;
                 }
-                       index++;
+                index++;
             }
-            if(index >= felszereles.size()){
+            if (index >= felszereles.size()) {
                 System.out.println("Nincs ilyen tárgy az inventoryban.");
-            } else{
-                System.out.println("Elhasználtad a tárgyadat.");
+            } 
+            else {
+                  if (db > 1){
+                  System.out.println("Elhasználtad a tárgyaidat.");
+                }else{
+                    System.out.println("Elhasználtad a tárgyadat.");
+                  }         
             }
         }
     }
-    
-    
-    
-    public void inventory(){
-        for (int i = 0; i < 10; i++) {
-            felszereles.get(i).toString();
+
+    @Override
+    public String toString() {
+        return "Karakter{" + "hp=" + hp + ", kepesseg=" + kepesseg + ", szerencse=" + szerencse + ", nev=" + nev + ", kaszt=" + kaszt + '}';
+    }
+
+    public void inventory() {
+        if (felszereles.size() == 0) {
+            System.out.println("Nincs egy tárgy semm az inventorydban.");
+        } else {
+            for (int i = 0; i < felszereles.size(); i++) {
+                System.out.println(   felszereles.get(i).toString());
+             
+            }
         }
-    
-    
+
     }
 }
