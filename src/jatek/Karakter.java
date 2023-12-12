@@ -53,14 +53,12 @@ public class Karakter {
                         System.out.println(felszereles.get(i).toString());
                         felszereles.remove(felszereles.get(i));
                     }
-
                 }
             } else {
                 System.out.println("Használt fegyverek, amik nem használodtak el:");
                 for (int i = 0; i < felszereles.size(); i++) {
                     if (felszereles.get(i).getNev() == targy) {
                         System.out.println(felszereles.get(i).toString());
-
                     }
                 }
             }
