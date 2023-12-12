@@ -46,20 +46,25 @@ public class Karakter {
     public void hasznal(String targy, int mennyiseg, boolean elhasznal) {
         int db = targy_inventory_megszamlalas(targy);
         if (mennyiseg <= db) {
+            int i = 0;
             if (elhasznal) {
                 System.out.println("Használt fegyverek, amik elhasználodtak:");
-                for (int i = 0; i < felszereles.size(); i++) {
+                while (mennyiseg > 0) {
                     if (felszereles.get(i).getNev() == targy) {
                         System.out.println(felszereles.get(i).toString());
                         felszereles.remove(felszereles.get(i));
+                        mennyiseg --;
                     }
+                    i++;
                 }
             } else {
                 System.out.println("Használt fegyverek, amik nem használodtak el:");
-                for (int i = 0; i < felszereles.size(); i++) {
+                while (mennyiseg > 0) {
                     if (felszereles.get(i).getNev() == targy) {
                         System.out.println(felszereles.get(i).toString());
+                        mennyiseg --;
                     }
+                    i++;
                 }
             }
         } else {
