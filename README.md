@@ -1,4 +1,6 @@
+# Mogyoródi Balázs
 # jatek
 
-#szenializálás (servialiasable)
+# szenializálás (servialiasable)
 # tervezési minta (design pattern)
+# Probléma:
