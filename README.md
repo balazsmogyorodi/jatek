@@ -5,5 +5,12 @@
 # tervezési minta (design pattern)
 # Probléma:
 Az edig használt if-es játék készítés nem megfelelő, mert nem elég efektív a mükődés módja. 
+# Ötletek:
+  Codig patterns:
+          bulid
+          State
+          decorator
+          observer
+
 
 # Megoldás:
