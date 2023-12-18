@@ -4,7 +4,7 @@
 # szenializálás (servialiasable)
 # tervezési minta (design pattern)
 # Probléma:
-Az edig használt if-es játék készítés nem megfelelő, mert nem elég efektív a mükődés módja. 
+Sok az egymásba ágyazott if, nem átlátható, nem modósitható a program.
 # Ötletek:
   Codig patterns:
           bulid
@@ -14,3 +14,5 @@ Az edig használt if-es játék készítés nem megfelelő, mert nem elég efekt
 
 
 # Megoldás:
+A state, design használata.
+
