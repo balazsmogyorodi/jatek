@@ -6,9 +6,18 @@ public class Kezdes extends Helyszin{
         return "Ez a kezdés.";
     }
 
-    public Helyszin egyikIrany() {
-        return this;
+    /**
+     *
+     * @return
+     */
+
+    public String egyikIrany() {
+        return "balra";
+    }
     
+    public String egyikBtnFelirat(){
+    
+    return "";
     }
 
 }

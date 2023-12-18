@@ -9,9 +9,14 @@ public class Start extends Helyszin{
     }
     
     
-    public Helyszin egyikIrany(){
-    return this;
+    public String egyikIrany(){
+    return "jobb";
     
+    }
+    
+     public String egyikBtnFelirat(){
+    
+        return "";
     }
     
 }
